@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 qwwee
 new line
-=======
-qwwee text 
->>>>>>> 331f25e8a36592acc3d6fe228ce69704d6e8fcdf
+
+
