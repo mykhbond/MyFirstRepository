@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html  lang="pl">
+<head>
+      <meta charset="utf-8" />
+	  <title>jQUERY1</title>
+	  <link rel="stylesheet" href="style5.css" type="text/css" />
+	   <script  src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>     			   
+</head>
+<body>
+       <div class="test">test1</div>
+       <div class="test">test2</div>
+       <p class="test">test3</p>
+       <p class="test">test4</p>
+	   
+	   	                <img src = "1.jpg" alt = "1" />
+						<img src = "2.jpg" alt = "2" title = "2" />
+						
+						<ul id="menu">
+						      <li><a href="">link1</a></li>
+						      <li><a href="">link2</a></li>
+						      <li><a href="">link3</a></li>
+						      <li><a href="">link4</a></li>
+						      <li><a href="">link5</a></li>
+						
+						</ul>
+						   <a href="">link6</a>
+						
+						
+	   <script type="text/javascript">
+	          var test = $('div.test');
+			     for(var i = 0; i < test.length; i++){
+				   test.get(i).style.color = "red";  <!-- test[i] jest to samo co test.get(i)-->
+				   test[i].style.color = "red";  <!-- test[i] jest to samo co test.get(i)-->
+				 }
+				 
+				 setTimeout("$('p.test').get(0).style.color = 'green'", 2000);  <!-- get(0) -- pierwszy element-->
+				 
+				    var test1 = $("div");  <!-- wybraliśmy wszystki tegi div, wszystki div zapisany do tabeli  test1-->
+					alert("Ilość tegów div = "+test.length); <!-- ile tegów div w tabeli?-->
+					
+					var img = $("img[title]"); <!--wybpaliśmy wszystki tegi img gdzie jest atrybut title czyli zaraz będzie tabela img -->
+					alert("Ilość tegów img z atrybutem title = "+img.length);
+					
+			     	<!--	var link = $("a");  wyberamy wszystki a nawet poza ul-->
+					<!--	var link = $("#menu li a");  wyberamy wszystki a wewnętrz ul-->
+					
+					var link = $("#menu li a:first");<!-- wyberamy tylko  pierwszy wiersz li-->
+					alert("pierwszy wiersz li = "+link.html());
+					
+					link = $("#menu li a:eq(2)");<!-- wyberamy  ekwiwalent wierszu li, tu od 0 do 4, tu będzie link3 -->
+					alert("ekwiwalent indeksu 2 = "+link.html());
+				 
+	   </script>
+	                    
+	   
+	   
+</body>
+</html>

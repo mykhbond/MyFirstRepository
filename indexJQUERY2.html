@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  lang="pl">
+<head>
+      <meta charset="utf-8" />
+	  <title>jQUERY2</title>	 
+	   <script  src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>   
+        <script type = "text/javascript">
+		     function valid(){
+			     var state = $("input[name = 'plec'] : checked").val();
+				  if(!state) return $("pomyłka").html("<font style = 'color: red' >Podać plec!</font><br />");
+			 }
+		</script>	   
+</head>
+<body> 
+           <form name = "form" id = "form">
+		         <label for = "kob">Kobieta</label>
+		         <input type = "radio" name = "plec" value = "kobieta" id = "kobieta" />
+				 
+				 <label for = "men">męśczyzna</label>
+		         <input type = "radio" name = "plec" value = "mesczyzna" id = "mesczyzna" />
+				 <br /><br />
+				 <span id = "pomyłka"></span>
+		          <input  type = "button" onclick = "valid()"  id = "done" value = "Przycisk" />
+		   
+		   </form>
+      
+	   
+</body>
+</html>
